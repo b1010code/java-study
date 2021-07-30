@@ -1,1 +1,3 @@
-# java-study
+# Study
+
+Estudo diário diversos, testes... ...Methods, Functions, Parameters, Interfaces, Functional Interface, Streams, Filters, Date Time, Optional  ... etc...
