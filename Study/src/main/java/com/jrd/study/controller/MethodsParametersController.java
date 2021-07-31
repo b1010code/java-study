@@ -1,6 +1,7 @@
 package com.jrd.study.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
@@ -22,20 +23,26 @@ public class MethodsParametersController {
 	
 	@GetMapping("/car")
 	@ResponseBody        // model private ?
-	public int year(Car car) {
-		return this.methodsParametersImpl.changeYearCar(car);
+	public ResponseEntity<Integer>  year(Car car) {
+		Integer year = this.methodsParametersImpl.changeYearCar(car);
+		
+		return ResponseEntity.ok(year);
 	}
 	
 	@GetMapping("/morning")
 	@ResponseBody
-	public String goodMorning(String gm, String name) {
-		return this.methodsParametersImpl.goodMorning(gm, name);
+	public ResponseEntity<String>  goodMorning(String gm, String name) {
+		String good = this.methodsParametersImpl.goodMorning(gm, name);
+		
+		return ResponseEntity.ok(good);
 	}
 	
 	@GetMapping("/message")
 	@ResponseBody
-	public String message(String msg) {
-		return this.methodsParametersImpl.sendMessage(msg);
+	public ResponseEntity<String>  message(String msg) {
+		String mes = this.methodsParametersImpl.sendMessage(msg);
+		
+		return ResponseEntity.ok(mes);
 	}
 	
 	

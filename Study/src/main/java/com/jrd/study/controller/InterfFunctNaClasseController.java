@@ -1,6 +1,7 @@
 package com.jrd.study.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -8,7 +9,7 @@ import org.springframework.web.bind.annotation.RestController;
 import com.jrd.study.service.InterfFunctNaClasse;
 
 @RestController
-@RequestMapping("/classint")
+@RequestMapping("/interFuncNaClasse")
 public class InterfFunctNaClasseController {
 
 	@Autowired
@@ -19,8 +20,10 @@ public class InterfFunctNaClasseController {
 	}
 
 	@GetMapping
-	public double getInt() {
-		return this.interFunc.multiplyMeth(11.0, 30.0);
+	public ResponseEntity<Double>  getInt() {
+		Double calc = this.interFunc.multiplyMeth(11.0, 30.0);
+		
+		return ResponseEntity.ok(calc);
 	}
 
 }

@@ -3,6 +3,7 @@ package com.jrd.study.controller;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -21,14 +22,18 @@ public class StreamsController {
 		this.testingService = testingService;
 	}
 
-	@GetMapping
-	public List<PersonTwo> findAll() {
-		return testingService.clientes();
+	@GetMapping("/persontwo")
+	public ResponseEntity<List<PersonTwo>>  findAll() {
+		List<PersonTwo> list = testingService.clientes();
+		
+		return ResponseEntity.ok(list);
 	}
 
 	@GetMapping("/array")
-	public List<Integer> getArr() {
-		return this.testingService.arr();
+	public ResponseEntity<List<Integer>>  getArr() {
+		List<Integer> list = this.testingService.arr();
+		
+		return ResponseEntity.ok(list);
 	}
 	
 	/*
@@ -39,8 +44,10 @@ public class StreamsController {
 	
 	
 	@GetMapping("/stream1")
-	public List<Integer>getStream(){
-		return this.testingService.stream1();
+	public ResponseEntity<List<Integer>> getStream(){
+		List<Integer> list = this.testingService.stream1();
+		
+		return ResponseEntity.ok(list);
 	}
 	
 	@GetMapping("/stream2")

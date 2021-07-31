@@ -3,6 +3,7 @@ package com.jrd.study.controller;
 import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
@@ -23,8 +24,10 @@ public class OptionalController {
 	
 	@GetMapping
 	@ResponseBody
-	public Optional<Integer> findOptional(){
-		return this.optionalService.converOptLamb();
+	public ResponseEntity<Optional<Integer>>  findOptional(){
+		Optional<Integer> opt = this.optionalService.converOptLamb();
+		
+		return ResponseEntity.ok(opt);
 	}
 	
 	

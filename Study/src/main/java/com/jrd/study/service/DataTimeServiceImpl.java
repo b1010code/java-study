@@ -8,7 +8,7 @@ import java.time.Period;
 import org.springframework.stereotype.Service;
 
 @Service
-public class DataTimeImpl {
+public class DataTimeServiceImpl implements DataTimeService {
 	
 	
     // return period between date1 and date2
