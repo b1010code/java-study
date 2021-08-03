@@ -44,7 +44,7 @@ public class PersonFilterController {
 	
 	@GetMapping("/letter")
 	@ResponseBody
-	public ResponseEntity<List<Person>> getLetter(){
+	public ResponseEntity<List<Person>> findName(){
 		List<Person> list = this.personService.findLetter();
 		
 		return ResponseEntity.ok(list);

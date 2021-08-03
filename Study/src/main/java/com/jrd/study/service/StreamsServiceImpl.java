@@ -18,11 +18,14 @@ public class StreamsServiceImpl implements StreamsService {
 	public List<Integer> arr() {
 		List<Integer> numbers = Arrays.asList(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12);
 		numbers.stream().filter((l) -> l % 2 == 0) // why dont arrived pair numbers on postman
-				.forEach((l) -> System.out.println(l));
+				.forEach(System.out::println);		          
+	  // ou  // .forEach((l) -> System.out.println(l));		
 
 		return numbers;
 	}
 
+	
+	
 // .skip()  .distinct .equals .hashcode   // print count()
 	@Override
 	public List<Integer> stream1() {
