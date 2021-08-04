@@ -6,8 +6,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.jrd.study.model.Category;
-import com.jrd.study.model.Person;
-import com.jrd.study.model.Product;
 import com.jrd.study.repository.CategoryRepository;
 
 @Service
