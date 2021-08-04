@@ -25,7 +25,7 @@ public class ProductServiceQueryJPQLImpl implements ProductServiceQueryJPQL {
 	
 	
 	@Transactional(readOnly = true)
-	public List<ProductDTO> findQuery(PageRequest pageRequest) {
+	public List<ProductDTO> findQuery() {
 		List<Product> list = this.repositoryQuery.findAllProductsCategoriesCustom();
 		return list.stream().map(x -> new ProductDTO(x)).collect(Collectors.toList());
 	}
