@@ -41,6 +41,8 @@ images-study
 ## aplicatio.properties ##
 *.properties
 
+src/main/resources/application.properties
+
 
 
 

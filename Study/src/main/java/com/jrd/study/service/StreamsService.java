@@ -8,8 +8,6 @@ public interface StreamsService {
 
 	public List<Integer> arr();
 
-	// public String threadMeth();
-	
 	public List<Integer> stream1();
 
 	public void stream2();

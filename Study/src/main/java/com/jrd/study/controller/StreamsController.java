@@ -23,60 +23,44 @@ public class StreamsController {
 	}
 
 	@GetMapping("/persontwo")
-	public ResponseEntity<List<PersonTwo>>  findAll() {
+	public ResponseEntity<List<PersonTwo>> findAll() {
 		List<PersonTwo> list = testingService.clientes();
-		
+
 		return ResponseEntity.ok(list);
 	}
 
 	@GetMapping("/array")
-	public ResponseEntity<List<Integer>>  getArr() {
+	public ResponseEntity<List<Integer>> getArr() {
 		List<Integer> list = this.testingService.arr();
-		
+
 		return ResponseEntity.ok(list);
 	}
-	
-	/*
-	@GetMapping("/thread")
-	public String getThread() {
-		return this.testingService.threadMeth();
-	}  */
-	
-	
+
 	@GetMapping("/stream1")
-	public ResponseEntity<List<Integer>> getStream(){
+	public ResponseEntity<List<Integer>> getStream() {
 		List<Integer> list = this.testingService.stream1();
-		
+
 		return ResponseEntity.ok(list);
 	}
-	
+
 	@GetMapping("/stream2")
 	public void getStream2() {
-		 this.testingService.stream2();
+		this.testingService.stream2();
 	}
-	
+
 	@GetMapping("/stream3")
 	public void getStream3() {
-		 this.testingService.stream3();
+		this.testingService.stream3();
 	}
-	
+
 	@GetMapping("/collect")
 	public void getCollect() {
-		 this.testingService.collect1();
+		this.testingService.collect1();
 	}
-	
+
 	@GetMapping("/collect2")
 	public void getCollect2() {
-		 this.testingService.collect2();
+		this.testingService.collect2();
 	}
-	
-	
-	
-	
-	
-	
-	
-	
-	
 
 }
