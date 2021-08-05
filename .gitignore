@@ -38,8 +38,8 @@ build/
 ## images ##
 images-study
 
-## drafs ##
-drafts-Java-Study
+## aplicatio.properties ##
+src/main/resources/application.properties
 
 
 
