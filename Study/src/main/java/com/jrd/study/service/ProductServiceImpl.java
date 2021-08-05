@@ -31,8 +31,7 @@ public class ProductServiceImpl implements ProductService {
 
 	@Override
 	public Product findById(Long id) {
-		// TODO Auto-generated method stub
-		return null;
+		return this.productRepository.findById(id).get();
 	}
 
 }

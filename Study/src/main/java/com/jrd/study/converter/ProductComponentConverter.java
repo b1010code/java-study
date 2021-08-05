@@ -10,7 +10,7 @@ import com.jrd.study.dto.ProductDto;
 import com.jrd.study.model.Product;
 
 @Component
-public class ProductConverter {
+public class ProductComponentConverter {
 	public ProductDto entityToDto(Product product) {
 
 		ModelMapper mapper = new ModelMapper();
