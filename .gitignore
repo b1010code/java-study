@@ -39,7 +39,7 @@ build/
 images-study
 
 ## aplicatio.properties ##
-src/main/resources/application.properties
+*.properties
 
 
 
